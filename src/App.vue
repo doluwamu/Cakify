@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/app/NavBar.vue'
 </script>
 
 <template>
-  <header>
-    <nav class="flex gap-3">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/cakes">Cakes</RouterLink>
-    </nav>
-  </header>
+  <NavBar />
 
   <RouterView />
 </template>
