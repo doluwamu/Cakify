@@ -56,19 +56,27 @@ type State = {
   flavours: unknown[]
 }
 
-const state = (): State => ({
-  cakes: cakesDummy,
-  loadingFetch: false,
-  flavours: topFlavours
-})
+// const state = (): State => ({
+//   cakes: cakesDummy,
+//   loadingFetch: false,
+//   flavours: topFlavours
+// })
 
-const actions = {
-  async getCakes() {
-    // state().cakes
-  }
-}
+// const actions = {
+//   async getCakes() {
+//     // state().cakes
+//   }
+// }
 
 export const useCakeStore = defineStore('cake', {
-  state,
-  actions
+  state: () => ({
+    cakes: cakesDummy,
+    loadingFetch: false,
+    flavours: topFlavours
+  }),
+  actions: {
+    async getCakes() {
+      // state().cakes
+    }
+  }
 })

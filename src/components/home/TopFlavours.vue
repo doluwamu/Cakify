@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { useCakeStore } from '@/stores/cake'
+import { useCakeStore } from '../../stores/cake'
 
 export default {
   name: 'TopFlavours',
@@ -36,5 +36,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

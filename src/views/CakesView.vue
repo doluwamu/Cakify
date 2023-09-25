@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { storeToRefs } from 'pinia'
-import { useCakeStore } from '@/stores/cake'
+import { useCakeStore } from '../stores/cake'
 
 export default {
   name: 'Cakes',
