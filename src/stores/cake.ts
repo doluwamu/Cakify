@@ -2,7 +2,11 @@ import { ref, computed } from 'vue'
 import { defineStore, Store } from 'pinia'
 import axios from 'axios'
 
-import cakeImg from '../assets/img/cake.jpeg'
+import cakeImg from '@/assets/img/cake.jpeg'
+
+import cupcakes from '@/assets/img/app/cupcakes.jpg'
+import muffins from '@/assets/img/app/muffins.jpg'
+import tripplemix from '@/assets/img/app/tripplemix.jpg'
 
 type CakesDummy = {
   id: string | number
@@ -28,14 +32,34 @@ const cakesDummy: CakesDummy[] = [
   }
 ]
 
+const topFlavours: CakesDummy[] = [
+  {
+    id: '0TUFQLUJ2F',
+    type: 'Cup cakes',
+    image: cupcakes
+  },
+  {
+    id: 'C0QZTHGLHP',
+    type: 'Muffins',
+    image: muffins
+  },
+  {
+    id: 'HB37G5HC09',
+    type: 'Tripple mix',
+    image: tripplemix
+  }
+]
+
 type State = {
   cakes: unknown[]
   loadingFetch: boolean
+  flavours: unknown[]
 }
 
 const state = (): State => ({
   cakes: cakesDummy,
-  loadingFetch: false
+  loadingFetch: false,
+  flavours: topFlavours
 })
 
 const actions = {

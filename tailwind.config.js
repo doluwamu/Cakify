@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        'brown-500': 'hsla(25, 100%, 7%, 1)'
+        'brown-500': 'hsla(25, 100%, 7%, 1)',
+        'black-800': '#0008'
       }
     }
   },
