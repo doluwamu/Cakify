@@ -1,0 +1,2 @@
+PORT = Port your app will run on
+API_KEY = your spoonacular api
