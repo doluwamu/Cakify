@@ -3,13 +3,13 @@
 <br/>
 
 <p>If you don't have a spoonacular api key to specify in your env file, create a spoonacular account
-<a href="https://spoonacular.com/food-api/console#Dashboard">here</a>
+<a href="https://spoonacular.com/food-api/console#Dashboard" target="_blank" rel="noopener noreferrer">here</a>
 </p>
 
 <br/>
 
 <p>When you finally open an account, login and head to 
-<a href="https://spoonacular.com/food-api/console#Profile">My console</a> on the navbar and copy your api key and place it into the env file
+<a href="https://spoonacular.com/food-api/console#Profile" target="_blank" rel="noopener noreferrer">My console</a> on the navbar and copy your api key and place it into the env file
 </p>
 
 <br/>
