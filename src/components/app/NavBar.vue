@@ -11,14 +11,14 @@
         </a>
 
         <div
-          class="hamburger space-y-2 overflow-hidden cursor-pointer md:hidden"
+          class="flex flex-col items-start justify-center hamburger space-y-2 overflow-hidden cursor-pointer md:hidden"
           id="ham"
           @click="openNav"
           style="width: 25px; height: 20px"
         >
-          <div class="w-full bg-white rounded-3xl" style="height: 1px"></div>
-          <div class="w-full bg-white rounded-3xl" style="height: 1px"></div>
-          <div class="w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="top" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="center" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="bottom" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
         </div>
       </div>
 
@@ -105,6 +105,15 @@ export default {
   },
   methods: {
     openNav() {
+      // hamburger bars
+      const top = document.getElementById('top')
+      const center = document.getElementById('center')
+      const bottom = document.getElementById('bottom')
+
+      center.classList.toggle('hidden')
+      top.classList.toggle('rotate-45')
+      bottom.classList.toggle('rotate-neg45')
+
       const navbar = document.getElementById('navbar')
       navbar.classList.toggle('h-28')
     }
@@ -112,4 +121,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.rotate-neg45 {
+  transform: rotate(-45deg);
+}
+</style>

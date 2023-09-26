@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col px-2 my-28 gap-3 md:flex-row md:pr-2">
+  <section class="flex flex-col px-2 py-28 gap-3 md:flex-row md:pr-2">
     <div class="image-splide md:w-1/2">
       <img src="@/assets/img/app/cake4.jpg" alt="img" />
     </div>

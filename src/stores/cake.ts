@@ -75,8 +75,17 @@ export const useCakeStore = defineStore('cake', {
     flavours: topFlavours
   }),
   actions: {
-    async getCakes() {
-      // state().cakes
+    async getCakes(num: number = 6) {
+      try {
+        this.loadingFetch = true
+        const { data } = await axios.get(`http://localhost:3000/api/v1/cakes?number=${num}`)
+        this.loadingFetch = false
+        return (this.cakes = data)
+      } catch (error) {
+        // debugger
+        this.loadingFetch = false
+        throw error
+      }
     }
   }
 })
