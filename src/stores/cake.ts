@@ -9,9 +9,9 @@ import muffins from '@/assets/img/app/muffins.jpg'
 import tripplemix from '@/assets/img/app/tripplemix.jpg'
 
 type CakesDummy = {
-  id: string | number
-  type: string
-  image?: string
+  readonly id: string | number
+  readonly type: string
+  readonly image?: string
 }
 
 const cakesDummy: CakesDummy[] = [

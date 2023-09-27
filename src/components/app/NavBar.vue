@@ -16,9 +16,9 @@
           @click="openNav"
           style="width: 25px; height: 20px"
         >
-          <div id="top" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
-          <div id="center" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
-          <div id="bottom" class="w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="top" class="ham-line w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="center" class="ham-line w-full bg-white rounded-3xl" style="height: 1px"></div>
+          <div id="bottom" class="ham-line w-full bg-white rounded-3xl" style="height: 1px"></div>
         </div>
       </div>
 
@@ -106,13 +106,15 @@ export default {
   methods: {
     openNav() {
       // hamburger bars
-      const top = document.getElementById('top')
-      const center = document.getElementById('center')
-      const bottom = document.getElementById('bottom')
+      const top: HTMLElement = document.getElementById('top')
+      const center: HTMLElement = document.getElementById('center')
+      const bottom: HTMLElement = document.getElementById('bottom')
 
-      center.classList.toggle('hidden')
+      // center.classList.toggle('hidden')
       top.classList.toggle('rotate-45')
       bottom.classList.toggle('rotate-neg45')
+
+      center.classList.toggle('center-ham-move')
 
       const navbar = document.getElementById('navbar')
       navbar.classList.toggle('h-28')
@@ -124,5 +126,13 @@ export default {
 <style>
 .rotate-neg45 {
   transform: rotate(-45deg);
+}
+
+.ham-line {
+  transition: 0.5s;
+}
+
+.center-ham-move {
+  transform: translateX(-80px);
 }
 </style>

@@ -5,7 +5,7 @@
     </div>
 
     <div class="texts flex flex-col justify-center gap-6 px-2 md:px-20 md:w-1/2">
-      <h1 class="text-5xl">Get top notch preparation methods</h1>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl">Get top notch preparation methods</h1>
       <p class="text-justify">
         At Cakeify, we don't only provide you with the best ingredients for your dream cake, we also
         give a comprehensive preparation guide and put you through step by step on how to make that
@@ -13,7 +13,7 @@
       </p>
       <a
         href="/cakes"
-        class="button border border-brown-500 rounded-xl py-2 px-4 w-1/4 font-medium text-center text-brown-500 hover:bg-brown-500 hover:text-white"
+        class="button border border-brown-500 rounded-xl py-2 px-4 w-1/2 sm:w-1/4 sm:font-medium text-center text-brown-500 hover:bg-brown-500 hover:text-white"
         style="transition: 0.5s"
       >
         Explore
