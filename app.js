@@ -4,15 +4,16 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import path from "path";
+import { fileURLToPath } from "url";
 
 import errorHandler from "./middleware/errorHandler.js";
 import { logger, logEvents } from "./middleware/logger.js";
 
-import cakeRoutes from "./routes/cakes.js";
 import corsOptions from "./config/corsOptions.js";
 import connectDB from "./config/dbconnection.js";
 
-import { fileURLToPath } from "url";
+import authRoutes from "./routes/auth.js";
+import cakeRoutes from "./routes/cakes.js";
 
 dotenv.config();
 
@@ -30,11 +31,13 @@ app.use(cookieParser());
 app.use(logger);
 
 app.use(cors(corsOptions));
-// app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
+// Routes
+app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/cakes", cakeRoutes);
 
 app.all("*", (req, res) => {
