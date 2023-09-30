@@ -1,6 +1,6 @@
 <template>
   <section id="top-flavours" class="p-2">
-    <h1 class="text-3xl text-center font-semibold py-6 sm:text-4xl">Top Cakes</h1>
+    <h1 class="text-3xl text-center font-semibold py-6 sm:text-4xl">Top Categories</h1>
 
     <div class="flex flex-col gap-8 justify-center items-center sm:flex-row sm:flex-wrap">
       <div

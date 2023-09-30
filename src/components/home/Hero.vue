@@ -12,8 +12,8 @@
         class="text-white text-center text-xl opacity-70 sm:text-justify sm:text-xl md:text-3xl"
         style="max-width: 700px"
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati reiciendis deserunt
-        doloribus eligendi, vitae
+        Have a cake in mind but don't know how to make it? Look no further. We have the ingredients
+        and preparation methods just for you
       </p>
 
       <!-- <a
