@@ -23,7 +23,9 @@ const addCategory = async (req, res) => {
     if (!createdCategory)
       return res.status(400).json({ message: "Error creating category" });
 
-    return res.json({ message: `category "${category}" created successfully` });
+    return res.json({
+      message: `category ${category.toUpperCase()} created successfully`,
+    });
   } catch (error) {
     return res.json(error);
   }
