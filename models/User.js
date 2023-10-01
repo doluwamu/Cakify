@@ -1,7 +1,10 @@
 // const mongoose = require('mongoose')
-import mongoose from "mongoose";
+import { Schema, model } from "mongoose";
+import mongooseModelConstants from "../utils/mongooseConstants.js";
 
-const userSchema = new mongoose.Schema({
+const { USER } = mongooseModelConstants;
+
+const userSchema = new Schema({
   username: {
     type: String,
     required: true,
@@ -18,16 +21,20 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  roles: [
-    {
-      type: String,
-      default: "User",
-    },
-  ],
+  admin: {
+    type: Boolean,
+    default: false,
+  },
+  role: {
+    type: String,
+    default: "customer",
+  },
   active: {
     type: Boolean,
     default: true,
   },
 });
 
-export default mongoose.model("User", userSchema);
+const User = model(USER, userSchema);
+
+export default User;

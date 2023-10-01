@@ -39,3 +39,17 @@
 20230930	21:12:32	6d1567cc-8198-4a7e-b537-3760f440d409	GET	/api/v1/auth/refresh	undefined
 20230930	21:12:52	1294640c-5fab-4ea8-add4-61acd637968e	POST	/api/v1/auth	undefined
 20230930	21:12:57	9f9381ad-a6c0-4fc9-80a4-57c262b27fbe	GET	/api/v1/auth/refresh	undefined
+20231001	20:46:25	af32c12d-49dc-4215-9529-ab5368392e71	POST	/api/v1/auth/signup	undefined
+20231001	20:46:36	0d6cbc24-92f5-47a8-b065-db2f635a3a6a	POST	/api/v1/auth/signup	undefined
+20231001	20:46:40	0a498183-c60e-4a9d-9a4f-dcdfbc013c5c	POST	/api/v1/auth	undefined
+20231001	20:47:12	5a2b9401-03e8-45e4-916a-a695d51948d2	GET	/api/v1/auth/refresh	undefined
+20231001	20:47:19	04ba622d-10f1-49b9-93ec-2c2381a52c68	POST	/api/v1/auth/logout	undefined
+20231001	20:48:52	2b789856-3805-4876-ade2-9f80e65a47ab	GET	/api/v1/auth/refresh	undefined
+20231001	20:48:57	b8b8e65b-bc34-4968-8d70-ac7948b25c53	POST	/api/v1/auth	undefined
+20231001	20:49:02	9de3ae6b-a31d-4fd5-a5da-ed8539599647	GET	/api/v1/auth/refresh	undefined
+20231001	20:49:09	275f0c47-801f-4280-92ce-6711c436fd8b	POST	/api/v1/auth/logout	undefined
+20231001	23:49:35	75a328b3-3d49-4537-8866-45f21218962c	POST	/api/v1/cakes/category	undefined
+20231001	23:50:35	a6e952a8-64f5-45d9-9bfa-db3279aac1d6	POST	/api/v1/cakes/category	undefined
+20231001	23:51:08	9be4c50a-0066-465c-a25f-b08738e6f631	POST	/api/v1/cakes/category	undefined
+20231001	23:51:19	71dfc09a-cc5e-4627-9807-8a9da03af35a	POST	/api/v1/cakes/category	undefined
+20231001	23:52:17	c413a5cd-bb2f-45e1-806d-d8fcf3e26f03	POST	/api/v1/cakes/category	undefined
