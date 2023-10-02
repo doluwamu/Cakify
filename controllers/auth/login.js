@@ -28,11 +28,12 @@ const login = asyncHandler(async (req, res) => {
       {
         UserInfo: {
           username: foundUser.username,
-          roles: foundUser.roles,
+          email: foundUser.email,
+          admin: foundUser.admin,
         },
       },
       process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "1m" }
+      { expiresIn: "15m" }
     );
 
     const refreshToken = jwt.sign(

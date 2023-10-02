@@ -3,7 +3,6 @@ import Category from "../../models/Category.js";
 // REQUEST-TYPE PUT
 // REQUEST-URL /api/v1/cakes/category/:id
 // DES request edit cake category based on name provided (Admin only)
-
 const updateCategory = async (req, res) => {
   const { id } = req.params;
 

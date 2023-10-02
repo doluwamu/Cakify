@@ -5,6 +5,7 @@ import Category from "../../models/Category.js";
 // DES request to add a new category (Admin only)
 const addCategory = async (req, res) => {
   const { category } = req.body;
+  const { admin } = req;
 
   if (!category) return res.status(400).json({ message: "No category found" });
 
