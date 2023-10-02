@@ -24,6 +24,7 @@ const cakeSchema = new Schema(
     image: {
       type: String,
       required: true,
+      default: "https://unsplash.com/photos/kPxsqUGneXQ",
     },
     description: {
       type: String,
@@ -42,6 +43,12 @@ const cakeSchema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
       ref: CATEGORY,
+    },
+    size: {
+      type: String,
+      required: true,
+      default: "mid",
+      lowercase: true,
     },
   },
   {

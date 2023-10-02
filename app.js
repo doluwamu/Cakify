@@ -12,8 +12,8 @@ import { logger, logEvents } from "./middleware/logger.js";
 import corsOptions from "./config/corsOptions.js";
 import connectDB from "./config/dbconnection.js";
 
-import authRoutes from "./routes/auth.js";
-import cakeRoutes from "./routes/cakes.js";
+import authRoutes from "./routes/v1/auth.js";
+import cakeRoutes from "./routes/v1/cakes.js";
 
 dotenv.config();
 

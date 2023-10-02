@@ -1,8 +1,8 @@
 import { Router } from "express";
-import login from "../controllers/auth/login.js";
-import logout from "../controllers/auth/logout.js";
-import refresh from "../controllers/auth/refresh.js";
-import signup from "../controllers/auth/signup.js";
+import login from "../../controllers/v1/auth/login.js";
+import logout from "../../controllers/v1/auth/logout.js";
+import refresh from "../../controllers/v1/auth/refresh.js";
+import signup from "../../controllers/v1/auth/signup.js";
 // import verifyJWT from "../middleware/verifyJWT.js";
 
 const router = Router();

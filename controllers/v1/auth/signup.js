@@ -1,4 +1,4 @@
-import User from "../../models/User.js";
+import User from "../../../models/User.js";
 import bcrypt from "bcrypt";
 import asyncHandler from "express-async-handler";
 
@@ -32,27 +32,23 @@ const signup = asyncHandler(async (req, res) => {
       .json({ message: "User with this email already exists" });
   }
 
-  try {
-    // Hash password
-    const hashedPwd = await bcrypt.hash(password, 10); // salt rounds
+  // Hash password
+  const hashedPwd = await bcrypt.hash(password, 10); // salt rounds
 
-    const userObject = {
-      username,
-      email,
-      password: hashedPwd,
-    };
+  const userObject = {
+    username,
+    email,
+    password: hashedPwd,
+  };
 
-    // Create and store new user
-    const user = await User.create(userObject);
+  // Create and store new user
+  const user = await User.create(userObject);
 
-    if (user) {
-      //created
-      res.status(201).json({ message: `New user ${username} created` });
-    } else {
-      res.status(400).json({ message: "Invalid user data received" });
-    }
-  } catch (error) {
-    return res.json(error);
+  if (user) {
+    //created
+    res.status(201).json({ message: `New user ${username} created` });
+  } else {
+    res.status(400).json({ message: "Invalid user data received" });
   }
 });
 
