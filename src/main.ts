@@ -12,6 +12,6 @@ const app = createApp(App)
 
 app.use(authConfig)
 app.use(createPinia())
-app.use(router)
+app.use(router(app))
 
 app.mount('#app')

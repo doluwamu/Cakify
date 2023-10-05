@@ -25,7 +25,7 @@
       <div class="nav-links flex flex-col gap-10 items-center md:flex-row">
         <div class="flex flex-col justify-center gap-10 text-white md:flex-row">
           <a href="/">Home</a>
-          <a href="/cakes">Cakes</a>
+          <a href="/cakes" v-if="isAuthenticated">Cakes</a>
           <a href="/contact">Contact</a>
           <a href="/faqs">FAQs</a>
         </div>

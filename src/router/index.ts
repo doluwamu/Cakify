@@ -1,35 +1,44 @@
-import { createRouter, createWebHistory } from 'vue-router'
-// import HomeView from '../views/HomeView.vue'
-// import CakesView from '../views/CakesView.vue'
+import { createRouter as createVueRouter, createWebHistory, Router } from 'vue-router'
 
-// import { useAuth0 } from '@auth0/auth0-vue'
-// import { useA } from 'auth0-js'
+import { createAuthGuard } from '@auth0/auth0-vue'
+import { App } from 'vue'
 
-//  new Management().getUser('userId', callback)
-// // console.log(crypto.getRandomValues([]))
+const router = (app: App): Router => {
+  return createVueRouter({
+    history: createWebHistory(import.meta.env.BASE_URL),
+    routes: [
+      {
+        path: '/',
+        name: 'home',
+        component: () => import('../views/HomeView.vue')
+      },
+      {
+        path: '/cakes',
+        name: 'cakes',
+        component: () => import('../views/CakesView.vue'),
+        beforeEnter: createAuthGuard(app)
+      }
+    ]
+  })
+}
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('../views/HomeView.vue')
-    },
-    {
-      path: '/cakes',
-      name: 'cakes',
-      component: () => import('../views/CakesView.vue'),
-      meta: { requiresAuth: true }
-    }
-  ]
-})
-
-// router.beforeEach((to, from, next) => {
-//   if (to.meta.requiresAuth) {
-//   } else {
-//     next()
-//   }
-// })
+// export function createRouter(app: App): Router {
+//   return createVueRouter({
+//     routes: [
+//       {
+//         path: "/",
+//         name: "home",
+//         component: Home
+//       },
+//       {
+//         path: "/profile",
+//         name: "profile",
+//         component: Profile,
+//         beforeEnter: createAuthGuard(app)
+//       }
+//     ],
+//     history: createWebHashHistory()
+//   })
+// }
 
 export default router
